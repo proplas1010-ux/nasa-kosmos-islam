@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #05050a;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background 1s ease-in-out;
+    z-index: 1;
+}
+
+#bg-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.content-box {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00d2ff;
+}
+
+#date {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+#description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-height: 150px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+button {
+    background: linear-gradient(45deg, #00d2ff, #0066ff);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00d2ff;
+}
+
+/* İslamın İmzasının Stili */
+.author-tag {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 210, 255, 0.3);
+    font-size: 14px;
+    color: #eee;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.author-tag span {
+    color: #00d2ff;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(0, 210, 255, 0.6);
+}
+
+.author-tag:hover {
+    transform: translateY(-3px);
+    border-color: #00d2ff;
+    box-shadow: 0 6px 20px rgba(0, 210, 255, 0.4);
+}
